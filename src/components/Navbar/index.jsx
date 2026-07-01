@@ -44,23 +44,13 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center gap-6 ml-30">
                         <NavLink href="/">Home</NavLink>
                         <NavLink href="/posts">Posts</NavLink>
-                        <NavLink href="/posts">Changelog</NavLink>
+                        <NavLink href="/changelog">Changelog</NavLink>
                         <NavLink href="/autor">Autor</NavLink>
                     </div>
                 </div>
 
                 {/* RIGHT */}
                 <div className="flex items-center">
-                    {/* Hamburger */}
-                    <motion.button
-                        onClick={() => setOpen(!open)}
-                        className="text-muted mobile p-2 rounded-md lg:hidden"
-                        whileTap={{ scale: 0.92 }}
-                        animate={{ rotate: open ? 90 : 0 }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        {open ? <HiX size={22} /> : <HiMenu size={22} />}
-                    </motion.button>
 
                     {/* Desktop icons */}
                     <div className="hidden lg:flex items-center gap-5 ml-4">
@@ -71,11 +61,80 @@ export default function Navbar() {
                             <FaInstagram />
                         </SocialIcon>
                     </div>
+
+                    {/* Hamburger */}
+                    <motion.button
+                        onClick={() => setOpen(!open)}
+                        className="text-[#011d36] mobile p-2 rounded-md md:hidden"
+                        whileTap={{ scale: 0.92 }}
+                        animate={{ rotate: open ? 90 : 0 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        {open ? <HiX size={22} /> : <HiMenu size={22} />}
+                    </motion.button>
                 </div>
             </div>
 
             <div className="hidden md:flex absolute bottom-0 left-0 w-full h-[1.1px] bg-gradient-to-r from-transparent via-[#011D36]/40 to-transparent blur-[0.5px]" />
 
+
+{/* Mobile Menu */}
+
+            <AnimatePresence>
+                {open && (
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            className="fixed inset-0 top-[72px] bg-black/20 backdrop-blur-md z-40 md:hidden"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.25 }}
+                            onClick={() => setOpen(false)}
+                        />
+
+                        {/* Menu */}
+                        <motion.div
+                            className="fixed right-0 top-[72px] bottom-0 w-1/2 bg-page z-50 md:hidden"
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 320,
+                                damping: 30,
+                            }}
+                        >
+                            <div className="flex flex-col p-8 gap-6">
+                                <MobileLink href="/" onClick={() => setOpen(false)}>
+                                    Home
+                                </MobileLink>
+
+                                <MobileLink href="/posts" onClick={() => setOpen(false)}>
+                                    Posts
+                                </MobileLink>
+
+                                <MobileLink href="/changelog" onClick={() => setOpen(false)}>
+                                    Changelog
+                                </MobileLink>
+
+                                <MobileLink href="/autor" onClick={() => setOpen(false)}>
+                                    Autor
+                                </MobileLink>
+                            </div>
+
+                            <div className="flex items-center gap-5 justify-center mt-10">
+                                <SocialIcon href="https://github.com/Kotige">
+                                    <FaGithub />
+                                </SocialIcon>
+                                <SocialIcon href="https://www.instagram.com/modvestudio/">
+                                    <FaInstagram />
+                                </SocialIcon>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }
@@ -107,4 +166,18 @@ function NavLink({href, children}) {
             {children}
         </motion.a>
     )
+}
+
+function MobileLink({ href, children, onClick }) {
+    return (
+        <motion.a
+            href={href}
+            onClick={onClick}
+            className="text-lg text-[#1C64A0] font-medium"
+            whileHover={{ x: 6 }}
+            whileTap={{ scale: 0.97 }}
+        >
+            {children}
+        </motion.a>
+    );
 }
