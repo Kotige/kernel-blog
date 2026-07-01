@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Hero from "./Hero";
+import posts from "../../data/MiniPostData";
+import MiniPost from "../../components/MiniPostCards"
 
 export default function Home() {
     const [heroFinished, setHeroFinished] = useState(false);
@@ -12,6 +14,7 @@ export default function Home() {
             {heroFinished && (
                 <main className="mx-auto max-w-7xl px-6 py-1">
                     <Navbar />
+                    <MiniPost posts={posts}/>
                 </main>
             )}
         </div>
