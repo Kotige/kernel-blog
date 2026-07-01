@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.font-serif {
+    font-family: "Merriweather", serif;
+}
+
+@import "tailwindcss";
+
+:root {
+    --background: #f8f6f1;
+    --background-secondary: #efebe3;
+
+    --foreground: #1f1f1f;
+    --foreground-muted: #666666;
+
+    --accent: #2070B0;
+    --accent-hover: #1C64A0;
+    --accent-soft: #2C78BC;
+
+    --border: #ddd7cd;
+
+    --card: #fcfbf8;
+}
+@layer components {
+    .bg-page {
+        background-color: var(--background);
+    }
+
+    .bg-surface {
+        background-color: var(--background-secondary);
+    }
+
+    .text-main {
+        color: var(--foreground);
+    }
+
+    .text-muted {
+        color: var(--foreground-muted);
+    }
+
+    .border-default {
+        border-color: var(--border);
+    }
+
+    .text-accent {
+        color: var(--accent);
+    }
+
+    .bg-accent {
+        background-color: var(--accent);
+    }
+}
