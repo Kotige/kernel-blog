@@ -1,5 +1,6 @@
 import FeaturedPosts from "./FeaturedPosts"
 
+
 export default function MainContent() {
     return (
         <main 
@@ -9,6 +10,7 @@ export default function MainContent() {
                 {/* Conteúdo principal */}
                 <section id="posts" className="lg:col-span-2">
                     <FeaturedPosts />
+                    
                 </section>
 
                 {/* Sidebar */}
