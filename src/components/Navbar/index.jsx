@@ -30,7 +30,7 @@ export default function Navbar() {
                             />
 
                             <motion.span
-                                className="absolute -left-8 z-20 ps-13 text-xl font-serif text-[#011d36]"
+                                className="absolute -left-8 z-20 ps-13 text-2xl font-serif text-[#011d36]"
                                 initial={{ opacity: 0, x: -10 }}
                                 whileHover={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.35 }}
@@ -158,7 +158,7 @@ function NavLink({href, children}) {
     return (
         <motion.a
             href={href}
-            className="text-sm text-muted hover:text-[#2070B0] hover:font-medium relative inline-block"
+            className="text-base text-muted hover:text-[#2070B0] hover:font-medium relative inline-block"
             initial="rest"
             whileHover="hover"
             animate="rest"
