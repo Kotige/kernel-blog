@@ -8,6 +8,10 @@ body {
     font-family: "Manrope", sans-serif;
 }
 
+.font-sans {
+    font-family: "Syne", sans-serif;
+}
+
 @import "tailwindcss";
 
 :root {
@@ -17,9 +21,9 @@ body {
     --foreground: #1f1f1f;
     --foreground-muted: #666666;
 
-    --accent: #2070B0;
+    --accent: #011d36;
     --accent-hover: #1C64A0;
-    --accent-soft: #2C78BC;
+    --accent-soft: ##033661;
 
     --border: #ddd7cd;
 

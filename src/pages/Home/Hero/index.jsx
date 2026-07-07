@@ -37,7 +37,7 @@ export default function Hero( {onFinish} ) {
 
             <div className="relative z-10 max-w-2xl px-6 text-center">
 
-              <motion.p className="lg:text-start lg:ms-6 text-[#033661] text-sm lg:text-base"
+              <motion.p className="font-sans lg:text-start lg:ms-3 text-[#033661] text-sm lg:text-base"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 1 }}
@@ -45,7 +45,7 @@ export default function Hero( {onFinish} ) {
                 Bem-vindos ao
               </motion.p>
 
-              <motion.h1 className="font-serif text-7xl lg:text-8xl text-[#011d36]"
+              <motion.h1 className="font-serif text-7xl lg:text-8xl text-accent"
                 initial={{ opacity: 0, y:20, filter: "blur(10px)" }}
                 animate={{ opacity: 1, y:0, filter: "blur(0px)" }}
                 transition={{ duration: 1, delay: 1 }}
@@ -53,7 +53,7 @@ export default function Hero( {onFinish} ) {
                 Kernel
               </motion.h1>
 
-              <motion.p className="mt-10 text-sm lg:text-base text-[#033661] max-w-md mx-auto leading-relaxed"
+              <motion.p className="font-sans mt-5 text-sm lg:text-base text-[#033661] max-w-md mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2, duration: 0.8 }}
