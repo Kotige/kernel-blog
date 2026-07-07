@@ -7,8 +7,8 @@ export default function FeaturedPosts() {
         <section>
         
         <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl text-[#033661]">Destaques</h3>
-            <p className="text-sm text-accent">Veja todos</p>
+            <h3 className="text-2xl text-[#033661]">Destaques</h3>
+            <p className="text-base text-accent">Veja todos</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
