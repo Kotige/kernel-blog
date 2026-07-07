@@ -44,6 +44,7 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center gap-6 ml-30">
                         <NavLink href="/">Home</NavLink>
                         <NavLink href="/posts">Posts</NavLink>
+                        <NavLink href="#projects">Projetos</NavLink>
                         <NavLink href="/changelog">Changelog</NavLink>
                         <NavLink href="/autor">Autor</NavLink>
                     </div>
@@ -112,6 +113,10 @@ export default function Navbar() {
 
                                 <MobileLink href="/posts" onClick={() => setOpen(false)}>
                                     Posts
+                                </MobileLink>
+
+                                <MobileLink href="#projects" onClick={() => setOpen(false)}>
+                                    Projetos
                                 </MobileLink>
 
                                 <MobileLink href="/changelog" onClick={() => setOpen(false)}>
