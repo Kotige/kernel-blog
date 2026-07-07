@@ -37,7 +37,7 @@ export default function Hero( {onFinish} ) {
 
             <div className="relative z-10 max-w-2xl px-6 text-center">
 
-              <motion.p className="lg:text-start lg:ms-18 text-[#033661] text-sm"
+              <motion.p className="lg:text-start lg:ms-6 text-[#033661] text-sm lg:text-base"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 1 }}
@@ -53,12 +53,14 @@ export default function Hero( {onFinish} ) {
                 Kernel
               </motion.h1>
 
-              <motion.p className="mt-10 text-sm text-[#033661] max-w-md mx-auto leading-relaxed"
+              <motion.p className="mt-10 text-sm lg:text-base text-[#033661] max-w-md mx-auto leading-relaxed"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2, duration: 0.8 }}
               >
-                Onde ideias de mundos diferentes colidem e criam novas estruturas.
+                Onde ideias de mundos diferentes colidem
+                <br className=""/>
+                e criam novas estruturas.
               </motion.p>
             </div>
 
