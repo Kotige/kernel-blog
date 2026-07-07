@@ -5,6 +5,7 @@ import posts from "../../data/MiniPostData";
 import MiniPost from "../../components/MiniPostCards"
 import MainContent from "./MainContent";
 import Journey from "./Journey";
+import Projects from "./Projects";
 
 export default function Home() {
     const [heroFinished, setHeroFinished] = useState(false);
@@ -19,6 +20,7 @@ export default function Home() {
                     <MiniPost posts={posts}/>
                     <MainContent />
                     {/* <Journey /> */}
+                    <Projects />
                 </main>
             )}
         </div>
