@@ -1,117 +1,52 @@
 import {
-    PiAtomThin,
-    PiPlanetThin,
+    PiDatabaseThin,
+    PiRocketThin,
     PiCodeThin,
-    PiBookOpenThin,
     PiFlaskThin,
+    PiBookOpenThin,
 } from "react-icons/pi";
 
-export default [
+const projects = [
     {
-        id: "KRN-001",
-
-        title: "Kernel",
-
-        icon: PiAtomThin,
-
+        id: 1,
+        title: "Ciência de Dados",
         description:
             "O núcleo de ideias que conecta ciência, programação e mundos imaginários.",
-
-        status: "active",
-
+        icon: PiDatabaseThin,
         href: "/projetos/kernel",
-
-        relatedPosts: [
-            {
-                title: "Manifesto",
-                href: "/artigos/manifesto"
-            },
-            {
-                title: "Como ideias se conectam",
-                href: "/artigos/conexoes"
-            }
-        ]
     },
-
     {
-        id: "PHY-002",
-
-        title: "Gravity Lab",
-
-        icon: PiPlanetThin,
-
+        id: 2,
+        title: "Simulações de Física",
         description:
-            "Experimentos interativos para visualizar gravitação, órbitas e sistemas dinercâmicos.",
-
-        status: "beta",
-
-        href: "/projetos/gravity-lab",
-
-        relatedPosts: [
-            {
-                title: "O problema dos três corpos",
-                href: "/artigos/tres-corpos"
-            },
-            {
-                title: "Como buracos negros evaporam",
-                href: "/artigos/buracos-negros"
-            }
-        ]
+            "Explorando conceitos através de simulações interativas.",
+        icon: PiRocketThin,
+        href: "/projetos/simulacoes",
     },
-
     {
-        id: "DEV-003",
-
-        title: "Compiler",
-
+        id: 3,
+        title: "Ferramentas",
+        description:
+            "Pequenas ferramentas para resolver grandes problemas.",
         icon: PiCodeThin,
-
-        description:
-            "Visualizador das etapas internas de um compilador.",
-
-        status: "planned",
-
-        href: "/projetos/compiler",
-
-        relatedPosts: [
-            {
-                title: "Criando um compilador simples",
-                href: "/artigos/compilador"
-            }
-        ]
+        href: "/projetos/ferramentas",
     },
-
     {
-        id: "LAB-004",
-
+        id: 4,
         title: "Experimentos",
-
+        description:
+            "Protótipos, testes e ideias em constante evolução.",
         icon: PiFlaskThin,
-
-        description:
-            "Coleção de pequenos experimentos interativos de Física.",
-
-        status: "published",
-
         href: "/projetos/experimentos",
-
-        relatedPosts: []
     },
-
     {
-        id: "EDU-005",
-
+        id: 5,
         title: "Materiais Didáticos",
-
-        icon: PiBookOpenThin,
-
         description:
-            "Conteúdos gratuitos para professores e estudantes.",
-
-        status: "active",
-
+            "Conteúdo para aprender e ensinar física e programação.",
+        icon: PiBookOpenThin,
         href: "/projetos/materiais",
-
-        relatedPosts: []
-    }
+    },
 ];
+
+export default projects;
